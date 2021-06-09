@@ -5,56 +5,93 @@ let jogo;
 
 const perguntas = [
     {
-        category: 'Meio Ambiente',
-        correct_answer: 'duas',
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: '38 milhões',
         difficulty: 'easy',
-        incorrect_answers: ['uma','três','quatro'],
-        question: 'quantas irmãs o gab tem',
+        incorrect_answers: ['38 mil', '40 milhões', '28 milhões'],
+        question: 'Quantos animais são retirados da fauna silvestre anualmente?',
         respondida: false
     },
     {
-        category: 'Meio Ambiente',
-        correct_answer: 'duas',
-        difficulty: 'medium',
-        incorrect_answers: ['uma','três','quatro'],
-        question: 'quantas irmãs o gui tem',
-        respondida: false
-    },
-    {
-        category: 'Meio Ambiente',
-        correct_answer: 'duas',
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: '1',
         difficulty: 'easy',
-        incorrect_answers: ['uma','três','quatro'],
-        question: 'quantas irmãs o gustavo tem',
+        incorrect_answers: ['2', '3', '4'],
+        question: 'A cada 10 animais traficados quantos sobrevivem?',
         respondida: false
     },
     {
-        category: 'Ambiente Inteiro',
-        correct_answer: 'duas',
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: 'Aves',
         difficulty: 'easy',
-        incorrect_answers: ['uma','três','quatro'],
-        question: 'quantas irmãs o igão tem',
+        incorrect_answers: ['Peixes', 'Répteis', 'Mamíferos'],
+        question: 'Qual é o principal classe de animais tráficados no Brasil?',
         respondida: false
     },
     {
-        category: 'Meio Ambiente',
-        correct_answer: 'duas',
-        difficulty: 'hard',
-        incorrect_answers: ['uma','três','quatro'],
-        question: 'quantas irmãs o alvim tem',
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: 'Norte/Nordeste',
+        difficulty: 'easy',
+        incorrect_answers: ['Norte/Sudeste', 'Sul/Centro-Oeste', 'Sudeste/Nordeste'],
+        question: 'Quais regiões do Brasil mais retiram animais da fauna silvestre?',
         respondida: false
-    }
+    },
+    {
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: 'Sul/Sudeste',
+        difficulty: 'easy',
+        incorrect_answers: ['Norte/Sudeste', 'Sul/Norte', 'Sul/Centro-Oeste'],
+        question: 'Quais regiões do Brasil mais consomem do tráfico de animais silvestres?',
+        respondida: false
+    },
+    {
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: 'Brasil',
+        difficulty: 'easy',
+        incorrect_answers: ['Colombia', 'Africa do Sul', 'Cuba'],
+        question: 'Qual país mais contrabanda animais silvestres no mundo?',
+        respondida: false
+    },
+    {
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: '20 bilhões de Dólares',
+        difficulty: 'easy',
+        incorrect_answers: ['20 milhões de Dólares', '1 bilhão de Dólares', '1 milhão de Dólares'],
+        question: 'Por ano, quantos dólares o Brasil gera mundialmente devido ao tráfico?',
+        respondida: false
+    },
+    {
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: '2ª',
+        difficulty: 'easy',
+        incorrect_answers: ['1ª', '3ª', '4ª'],
+        question: 'O Tráfico de animais é a __ principal ameaça à fauna brasileira',
+        respondida: false
+    },
+    {
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: '3ª',
+        difficulty: 'easy',
+        incorrect_answers: ['2º', '1º', '4º'],
+        question: 'O Tráfico de animais é a __ maior atividade ilegal no mundo',
+        respondida: false
+    },
+    {
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: '181',
+        difficulty: 'easy',
+        incorrect_answers: ['190', '183', '911'],
+        question: 'Qual o número do disque-denúncias para crimes ambientais?',
+        respondida: false
+    },
+    
 ]
 
 const categorias = [
     {
         id: 0,
-        name: 'Meio Ambiente'
+        name: 'Tráfico de Animais Silvestres'
     },
-    {
-        id: 1,
-        name: 'Ambiente Inteiro'
-    }
 ]
 
 const elementos = {
@@ -220,7 +257,7 @@ const index = () => {
 
     //verifica se a questão escolhida aleatoriamente é da categoria escolhida pelo usuario e se ja ainda não foi respondida, caso não ele sorteia outra pergunta caso sim ele retorna a perguna
 
-    if (perguntas[i].category != jogo.categoriaPalavra || perguntas[i].respondida == true) {
+    if (perguntas[i].category != jogo.categoriaPalavra || perguntas[i].respondida == true || perguntas[i].difficulty != jogo.dificuldade) {
         console.log("entrou");
         return index()
         
@@ -238,7 +275,7 @@ const carregarPergunta = () => {
         let jaRespondida = 0
 
         for (let index = 0; index < perguntas.length; index++) {
-            if (perguntas[index].category == jogo.categoriaPalavra) {
+            if (perguntas[index].category == jogo.categoriaPalavra && perguntas[index].difficulty == jogo.dificuldade) {
                 if (perguntas[index].respondida == false) {
                     jaRespondida++
                 }
@@ -289,7 +326,9 @@ const verificarAcerto = (resposta) => {
         buttonConfirm.classList.remove('btn-outline-light')
         buttonConfirm.classList.add('btn-outline-danger')
         jogo.computarErro()
+        jogo.pergunta.respondida = true
     }
+    
 }
 
 const carregarTelaFimJogo = () => {
