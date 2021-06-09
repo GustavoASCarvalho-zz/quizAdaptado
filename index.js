@@ -54,10 +54,10 @@ const perguntas = [
     },
     {
         category: 'Tráfico de Animais Silvestres',
-        correct_answer: '20 bilhões de Dólares',
+        correct_answer: '2 bilhões de Dólares',
         difficulty: 'easy',
         incorrect_answers: ['20 milhões de Dólares', '1 bilhão de Dólares', '1 milhão de Dólares'],
-        question: 'Por ano, quantos dólares o Brasil gera mundialmente devido ao tráfico?',
+        question: 'Quantos bilhões o Brasil gera devido ao tráfico?',
         respondida: false
     },
     {
@@ -84,7 +84,86 @@ const perguntas = [
         question: 'Qual o número do disque-denúncias para crimes ambientais?',
         respondida: false
     },
-    
+    {
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: 'R$500',
+        difficulty: 'medium',
+        incorrect_answers: ['R$3000', 'R$5000', 'R$1000'],
+        question: 'Se uma pessoa, que tenha, com posse ilegal de um animal silvestre for presa, qual o valor aproximado que receberá de multa?',
+        respondida: false
+    },
+    {
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: 'Por volta de 200',
+        difficulty: 'medium',
+        incorrect_answers: ['Por volta de 100', 'Por volta de 500 ', 'Mais de mil'],
+        question: '"As zoonoses são doenças ou infecções que naturalmente são transmitidas de animais para vertebrados humanos", segundo a OMS. Por volta de quantas doenças dessa categoria a organização reconhece?',
+        respondida: false
+    },
+    {
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: 'Câncer',
+        difficulty: 'medium',
+        incorrect_answers: ['Raiva', 'Ebola', 'SARS'],
+        question: 'Qual dessas é uma doença que NÃO foi gerada por uma zoonose?',
+        respondida: false
+    },
+    {
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: 'em cativeiro, Estados Unidos, livres, resto do mundo.',
+        difficulty: 'medium',
+        incorrect_answers: ['em cativeiro, mundo, livres, continente africano.', 'livres, Savana, em cativeiro, mundo.', 'livres, resto do mundo, em cativeiro, continente africano.'],
+        question: 'Existem mais tigres ___ no _____ do que _____ no ____.',
+        respondida: false
+    },
+    {
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: 'Com a chegada dos portugueses em terras indígenas',
+        difficulty: 'medium',
+        incorrect_answers: ['Com a independência do Brasil, com a liberdade no mercado.', 'Na época dos navios negreiros.', 'Após o século XIX.'],
+        question: 'Históricamente, o primeiro contato com o tráfico de animais no Brasil começou:',
+        respondida: false
+    },
+    {
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: 'SARS-COV-2.',
+        difficulty: 'medium',
+        incorrect_answers: ['Peste Bulbônica', 'Peste Negra', ' Varíola'],
+        question: 'As pandemias mundiais existem há muito tempo. A mais recente delas, que causou emergência sanitária em todo o planeta, foi a pandemia do ___, que está ligada intrinsecamente ao tráfico e consumo de animais silvestres',
+        respondida: false
+    },
+    {
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: 'Após 1950.',
+        difficulty: 'medium',
+        incorrect_answers: ['Antes de 1950.', 'Antes de 1900.', 'Após os anos 2000.'],
+        question: 'A declaração universal dos direitos dos animais foi criada em:',
+        respondida: false
+    },
+    {
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: 'De 6 meses á 1 ano, somente.',
+        difficulty: 'medium',
+        incorrect_answers: ['De 1 á 5 anos, somente.', 'De 5 á 10 anos, somente.', '10 anos de reclusão.'],
+        question: 'A pena para um traficante de animais pode ser:',
+        respondida: false
+    },
+    {
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: 'O desejo de ter um animal exótico.',
+        difficulty: 'medium',
+        incorrect_answers: ['A ligação ao sentimento de que os animais exóticos trazem  representatividade de poder.', 'A influência de figuras públicas com animais exóticos como algo positivo.', 'A maneira como as redes sociais amplificam o acesso a esse comércio.'],
+        question: 'Qual a alternativa INCORRETA com relação as principais causas para o aumento do tráfico de animais',
+        respondida: false
+    },
+    {
+        category: 'Tráfico de Animais Silvestres',
+        correct_answer: '1163',
+        difficulty: 'medium',
+        incorrect_answers: ['2948', '4205', '534'],
+        question: 'Segundo o ICMBIO, atualmente, no Brasil, existem ___ espécies ameaçadas de extinção',
+        respondida: false
+    },
 ]
 
 const categorias = [
